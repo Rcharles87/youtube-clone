@@ -1,4 +1,3 @@
-
 import { Component } from 'react';
 import './App.css';
 import About from './components/about/About';
