@@ -1,0 +1,28 @@
+.about-container{
+    display: grid;
+    grid-gap: 10px;
+}
+
+.project-description{
+    background-color: rgb(226, 226, 226)
+}
+
+.project-description h2{
+    text-decoration: underline;
+}
+
+.team-bio{
+    background-color: rgb(226, 226, 226)
+}
+
+.team-bio h3{
+    text-decoration: underline;
+}
+
+.github-links{
+    background-color: rgb(226, 226, 226)
+}
+
+.github-links h3{
+    text-decoration: underline;
+}
