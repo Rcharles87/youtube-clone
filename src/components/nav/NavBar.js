@@ -10,9 +10,41 @@ import { Notifications } from "@material-ui/icons";
 class NavBar extends Component{
     constructor(){
         super()
+        this.state={
+        fetchData: [],
+        userInput: ""      
+        }
+
     }
 
+
+    handleYoutubeFetch = () => {
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.userSearch}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            this.setState({
+                fetchData: data.items
+            })
+        })
+    }
+
+    handleSearch=(event)=>{
+        event.preventDefault()
+        this.handleYoutubeFetch()
+    }
+
+    handleInput=(event)=>{
+        this.setState({
+            userSearch: event.target.value
+        })
+    }
+
+
     render(){
+        console.log(this.state.fetchData)
+        console.log(this.state.userInput)
+
         return(
 
             <div className="navbar">
@@ -26,10 +58,16 @@ class NavBar extends Component{
                  />
                 </div>
 
-                <div className="navbar-input">
-                 <input placeholder="Search..." type="text" />
+                <form className="navbar-input" onSubmit={this.handleSearch} >
+                 <input 
+                 placeholder="Search..." 
+                 type="text" 
+                 onInput={this.handleInput}
+                 />
+                 <button>
                 <Search className="navbar-inputButton"/>
-                </div>
+                 </button>
+                </form>
 
                 <div className="navbar-icons">
                 <VideoCall className="navbar-icon"/>
