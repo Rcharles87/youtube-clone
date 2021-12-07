@@ -18,7 +18,18 @@ class About extends Component{
 
                 <div className="team-bio">
                     <h3>Team Bios</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus saepe doloremque dolorum at sed cumque sequi consequuntur aliquam? Delectus optio, nam quibusdam laboriosam perferendis voluptatibus ipsum cum inventore consequatur.</p>
+                    <div className="rae">
+                        <h4>Rae Charles</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus saepe doloremque dolorum at sed cumque sequi consequuntur aliquam? Delectus optio, nam quibusdam laboriosam perferendis voluptatibus ipsum cum inventore consequatur.</p>
+                    </div>
+                    <div className="stephanie">
+                        <h4>Stephanie Reyes </h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus saepe doloremque dolorum at sed cumque sequi consequuntur aliquam? Delectus optio, nam quibusdam laboriosam perferendis voluptatibus ipsum cum inventore consequatur.</p>
+                    </div>
+                    <div className="laiba">
+                        <h4>Laiba Sajid</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus delectus saepe doloremque dolorum at sed cumque sequi consequuntur aliquam? Delectus optio, nam quibusdam laboriosam perferendis voluptatibus ipsum cum inventore consequatur.</p>
+                    </div>
                 </div>
 
                 <div className="github-links">
