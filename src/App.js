@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/about/About';
 import Nav from './components/nav/NavBar';
 import Videos from './components/video/Videos';
+import Home from './components/home/Home';
 
 class App extends Component {
 
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
+        <Home/>
         <About />
         <Videos />
       </div>
