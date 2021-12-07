@@ -1,18 +1,37 @@
 import {Component} from 'react';
+import YouTube from 'react-youtube';
+
 
 class HomeVideoCard extends Component {
+    constructor(){
+        super();
+        this.state = {
+
+        }
+    }
 
     render () {
-          console.log(this.props.recomendedVideosOnLoad)
+
+
+        console.log(this.props.recomendedVideosOnLoad)
           //what do i need from you tube :P
-          const {contentDetails, snippet, statistics } = this.props.recomendedVideosOnLoad
+        const {id, contentDetails, snippet, statistics } = this.props.recomendedVideosOnLoad
+
+        const opts = {
+            height: '390',
+            width: '640',
+            playerVars: {
+                autoplay:1
+            },
+        };
+
         return (
-            <article className='video-card' alt={snippet.localized.title}> 
+            <article className='video-card' alt={snippet.channelTitle} > 
 
                 <h4>{snippet.localized.title}</h4>
 
                 <div className='video-thumbnail'> 
-                   <img src= {snippet.thumbnails.medium.url} />
+                   <YouTube videoId={id} opts={{height:'195', width:'320'}}/>
                 </div>
                 
                 <div className="video-details"> 

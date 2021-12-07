@@ -35,8 +35,9 @@ class Home extends Component {
 
         return (
             <div id='home-display-container'>
-                <h2> Home Page</h2>
                 <div id='all-videos'>
+
+                <h2> Popular Videos </h2>
                 {recommendedVideos}
                 </div>
             </div>
