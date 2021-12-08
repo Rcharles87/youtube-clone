@@ -1,5 +1,6 @@
 import { Component } from "react";
 import HomeVideoCard from './HomeVideoCard'
+import './Home.css'
 
 class Home extends Component {
     constructor() {
@@ -34,10 +35,10 @@ class Home extends Component {
         })
 
         return (
-            <div id='home-display-container'>
-                <div id='all-videos'>
-
+            <div className='home-display-container'>
                 <h2> Popular Videos </h2>
+                <div className='all-videos'>
+
                 {recommendedVideos}
                 </div>
             </div>

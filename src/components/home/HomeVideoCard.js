@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import YouTube from 'react-youtube';
+import './HomeCard.css'
 
 
 class HomeVideoCard extends Component {
@@ -17,21 +18,15 @@ class HomeVideoCard extends Component {
           //what do i need from you tube :P
         const {id, contentDetails, snippet, statistics } = this.props.recomendedVideosOnLoad
 
-        const opts = {
-            height: '390',
-            width: '640',
-            playerVars: {
-                autoplay:1
-            },
-        };
-
         return (
             <article className='video-card' alt={snippet.channelTitle} > 
 
-                <h4>{snippet.localized.title}</h4>
-
+                <div className="try-this">
+                    <h4>{snippet.localized.title}</h4>
+                </div>
                 <div className='video-thumbnail'> 
-                   <YouTube videoId={id} opts={{height:'195', width:'320'}}/>
+                   {/* <YouTube videoId={id} opts={{height:'256', width:'420'}}/> */}
+                   <img src={snippet.thumbnails.medium.url} />
                 </div>
                 
                 <div className="video-details"> 
