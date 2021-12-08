@@ -5,7 +5,6 @@ import "./About.css"
 
 
 class About extends Component{
-  
 
     render(){
         return(
@@ -14,16 +13,15 @@ class About extends Component{
               <div className="project-description">
                   <h2>Project Description</h2>
                   <p>A small team of three people building a working youtube clone from scratch. 
-                      A React application was created that allows users to search for YouTube videos using the YouTube API. 
-                      Once the user has entered their desired "search input" a series of videos are displayed for the user to select from. 
+                      A React application was created that allows users to search for YouTube videos using Google's YouTube API. 
+                      Once the user has entered their desired "search input", a series of videos are displayed for the user to select from. 
                       Data was retrieved from API and rendered accordingly to display desired videos. 
                       Additionally, users are able to select a video from a list to watch based on inputted fields within the search bar. 
                       The project aims to recreate parts of the YouTube application, mimicking YouTube functionality. 
-                      Furthermore, YouTube Clone consists of features such as but not limitng to nav-Bar, home-page, and side-Bar. 
+                      Furthermore, YouTube Clone consists of a multiple features, such as but not limitng, to nav-Bar, home-page, and side-Bar. 
                       Components have been rendered and displayed through data to present precise information at the area of interest. 
                       When the user lands upon the home page, a series of "popular videos" are displayed. 
                       These popular videos have mounted upon initial user arrival.</p>
-                  
               </div>
 
                 <div className="team-bio">
