@@ -13,7 +13,7 @@ class About extends Component{
               <div className="project-description">
                   <h2>Project Description</h2>
                   <p>A small team of three people building a working youtube clone from scratch. 
-                      A React application was created that allows users to search for YouTube videos using Google's YouTube API. 
+                      A React application was created. This React applications allows users to search for YouTube videos using Google's YouTube API. 
                       Once the user has entered their desired "search input", a series of videos are displayed for the user to select from. 
                       Data was retrieved from API and rendered accordingly to display desired videos. 
                       Additionally, users are able to select a video from a list to watch based on inputted fields within the search bar. 
