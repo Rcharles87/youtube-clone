@@ -17,7 +17,7 @@
 
 .verified{
     color: grey;
-    max-width: 12px;
+    max-width: 15px;
 }
 
 .verified-icon {
@@ -44,6 +44,11 @@
 .verified-options {
     color: grey;
     max-width: 95px;
+}
+
+.verified-icon-dot{
+    color: grey; 
+    max-width: 10px;
 }
 
 .video-card :hover{

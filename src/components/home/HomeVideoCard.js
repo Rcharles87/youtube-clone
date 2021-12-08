@@ -3,7 +3,8 @@ import YouTube from 'react-youtube';
 import './HomeCard.css'
 import formatViews from '../../helperFunctions/formatViews';
 import formatDate from '../../helperFunctions/formatDate'
-import { AccountCircle, CheckCircle, MoreHoriz } from '@material-ui/icons';
+import { AccountCircle, CheckCircle, MoreHoriz, Circle, PersonPinCircle, SupervisedUserCircle, DonutSmall,} from '@material-ui/icons';
+import { CircularProgress } from '@material-ui/core';
 
 
 class HomeVideoCard extends Component {
@@ -35,8 +36,9 @@ class HomeVideoCard extends Component {
                 </div>  
 
                 <div className='video-stats'>
-                    <span className='video-upload-date'>{formatDate(snippet.publishedAt)} </span>
                     <div className='video-view-count'>{formatViews(statistics.viewCount)} views </div> 
+                    <DonutSmall className='verified-icon-dot'/>
+                    <span className='video-upload-date'>{formatDate(snippet.publishedAt)} </span>
                     <MoreHoriz className='verified-options'/>
                 </div>
 
