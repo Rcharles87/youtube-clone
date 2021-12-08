@@ -23,19 +23,15 @@ class HomeVideoCard extends Component {
 
         return (
             <article className='video-card' alt={snippet.channelTitle} > 
-
                 <div className='video-thumbnail'> 
                    {/* <YouTube videoId={id} opts={{height:'256', width:'420'}}/> */}
                    <img src={snippet.thumbnails.medium.url} />
                 </div>
-
                 <div className="video-title">
                     <h5>{snippet.localized.title}</h5>
                 </div>
-                
                 <div className="video-details"> 
-                    <p> {snippet.channelTitle} <CheckCircle className='verified'/> </p>
-                    <p className='viewCount'> {formatViews(statistics.viewCount)} views</p>
+                    <p className='viewCount'> {snippet.channelTitle} <CheckCircle className='verified'/> {formatViews(statistics.viewCount)} views</p>
                     <span> Upload Date: {snippet.publishedAt} </span>
                 </div>   
 

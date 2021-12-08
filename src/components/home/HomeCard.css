@@ -4,6 +4,15 @@
     border-radius: 10px;
     border-color: rgba(0, 0, 0, 0.193);
     border-width: 3px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.video-thumbnail {
+    margin-top: 20px;
+}
+
+.video-details{
+    margin-bottom: 10px;
 }
 
 .video-thumbnail, .video-title {
