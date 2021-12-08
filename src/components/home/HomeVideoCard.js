@@ -1,10 +1,8 @@
 import {Component} from 'react';
-import YouTube from 'react-youtube';
 import './HomeCard.css'
 import formatViews from '../../helperFunctions/formatViews';
 import formatDate from '../../helperFunctions/formatDate'
-import { AccountCircle, CheckCircle, MoreHoriz, Circle, PersonPinCircle, SupervisedUserCircle, DonutSmall,} from '@material-ui/icons';
-import { CircularProgress } from '@material-ui/core';
+import { AccountCircle, CheckCircle, MoreHoriz, DonutSmall,} from '@material-ui/icons';
 
 
 class HomeVideoCard extends Component {
@@ -23,8 +21,7 @@ class HomeVideoCard extends Component {
             <article className='video-card' alt={snippet.channelTitle} > 
                 
                 <div className='video-thumbnail'> 
-                   {/* <YouTube videoId={id} opts={{height:'256', width:'420'}}/> */}
-                   <img src={snippet.thumbnails.medium.url} />
+                   <img src={snippet.thumbnails.medium.url} alt="video-thumbnail snippet"/>
                 </div>
 
                 <div className="video-title">
