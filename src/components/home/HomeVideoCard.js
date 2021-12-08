@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import YouTube from 'react-youtube';
 import './HomeCard.css'
-
+import formatViews from '../../helperFunctions/formatViews';
 
 class HomeVideoCard extends Component {
     constructor(){
@@ -21,17 +21,19 @@ class HomeVideoCard extends Component {
         return (
             <article className='video-card' alt={snippet.channelTitle} > 
 
-                <div className="try-this">
-                    <h4>{snippet.localized.title}</h4>
-                </div>
                 <div className='video-thumbnail'> 
                    {/* <YouTube videoId={id} opts={{height:'256', width:'420'}}/> */}
                    <img src={snippet.thumbnails.medium.url} />
                 </div>
+
+                <div className="video-title">
+                    <h5>{snippet.localized.title}</h5>
+                </div>
                 
                 <div className="video-details"> 
                     <p> {snippet.channelTitle} </p>
-                    <p className='viewCount'> {statistics.viewCount} views</p>
+                    <p className='viewCount'> {formatViews(statistics.viewCount)} views</p>
+                    <span> {snippet.publishedAt} </span>
                 </div>   
 
             </article>

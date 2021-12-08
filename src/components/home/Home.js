@@ -41,6 +41,15 @@ class Home extends Component {
 
                 {recommendedVideos}
                 </div>
+
+                <hr
+                    style={{
+                        color: 'grey',
+                        backgroundColor: 'grey',
+                        height: 5
+                    }}
+                />
+                
             </div>
         )
     }

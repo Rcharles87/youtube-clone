@@ -7,5 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin:10px 10px 15px 15px;
-    grid-gap:5px
+    grid-gap:5px;
+    scroll-behavior: smooth;
 }
+
