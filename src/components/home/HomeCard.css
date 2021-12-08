@@ -11,14 +11,41 @@
     margin-top: 20px;
 }
 
-.video-details{
-    margin-bottom: 10px;
-}
-
-.video-thumbnail, .video-title {
+.video-thumbnail img, .channel-title, .video-title {
     cursor: pointer;
 }
 
 .verified{
     color: grey;
+    max-width: 12px;
+}
+
+.verified-icon {
+    color: grey;
+    max-width: 120px;
+}
+
+.video-title{
+
+}
+
+.channel-title{
+    margin-bottom: 15px;
+}
+
+.video-stats{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.verified-options {
+    color: grey;
+    max-width: 95px;
+}
+
+.video-card :hover{
+
 }

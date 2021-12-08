@@ -16,7 +16,7 @@ class Home extends Component {
     }
 
     handleHomePageFetch = () => {
-        fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=25&regionCode=US&key=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=28&regionCode=US&key=${process.env.REACT_APP_API_KEY}`)
             .then((res)=> {
                 return res.json();
             }).then((data)=> {
@@ -42,14 +42,6 @@ class Home extends Component {
                 {recommendedVideos}
                 </div>
 
-                <hr
-                    style={{
-                        color: 'grey',
-                        backgroundColor: 'grey',
-                        height: 5
-                    }}
-                />
-                
             </div>
         )
     }

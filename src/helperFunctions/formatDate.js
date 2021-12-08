@@ -7,7 +7,9 @@
  * @param {String} date
  * @returns {String} The formatted number views with commas 
  */
- const formatDate = (date) => ``;
+ const formatDate = (date) => {
+    return date.slice(0,10)
+ };
 
  export default formatDate;
  
