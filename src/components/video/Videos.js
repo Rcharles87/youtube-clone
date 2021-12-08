@@ -3,7 +3,7 @@ import YouTube from "react-youtube";
 
 class Videos extends Component {
     constructor(){
-        super()
+        super();
         this.state={
             userInput: ""
         }
