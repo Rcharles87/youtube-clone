@@ -9,3 +9,7 @@
 .video-thumbnail, .video-title {
     cursor: pointer;
 }
+
+.verified{
+    color: grey;
+}

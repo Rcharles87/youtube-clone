@@ -5,9 +5,9 @@
  * Example: formatViews(234999); // "234,999"
  *
  * @param {String} num
- * @returns {Number} The formatted number views with commas 
+ * @returns {String} The formatted number views with commas 
  */
- const formatViews = (num) => `${Number(num).toLocaleString(3)}`;
+ const formatViews = (num) => `${(Number(num).toLocaleString(3)).toString()}`;
 
  export default formatViews;
  

@@ -2,6 +2,8 @@ import {Component} from 'react';
 import YouTube from 'react-youtube';
 import './HomeCard.css'
 import formatViews from '../../helperFunctions/formatViews';
+import { CheckCircle } from '@material-ui/icons';
+
 
 class HomeVideoCard extends Component {
     constructor(){
@@ -10,6 +12,7 @@ class HomeVideoCard extends Component {
 
         }
     }
+    //add like, 
 
     render () {
 
@@ -31,9 +34,9 @@ class HomeVideoCard extends Component {
                 </div>
                 
                 <div className="video-details"> 
-                    <p> {snippet.channelTitle} </p>
+                    <p> {snippet.channelTitle} <CheckCircle className='verified'/> </p>
                     <p className='viewCount'> {formatViews(statistics.viewCount)} views</p>
-                    <span> {snippet.publishedAt} </span>
+                    <span> Upload Date: {snippet.publishedAt} </span>
                 </div>   
 
             </article>
