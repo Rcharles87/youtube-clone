@@ -17,7 +17,7 @@ class HomeVideoCard extends Component {
 
     render () {
 
-        const {id, contentDetails, snippet, statistics } = this.props.recomendedVideosOnLoad
+        const { snippet, statistics } = this.props.recomendedVideosOnLoad
 
         return (
             <article className='video-card' alt={snippet.channelTitle} > 
