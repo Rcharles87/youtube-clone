@@ -5,6 +5,7 @@ import { Search } from "@material-ui/icons";
 import { VideoCall } from "@material-ui/icons";
 import { Apps } from "@material-ui/icons";
 import { Notifications } from "@material-ui/icons";
+import {Info} from '@material-ui/icons';
 import {Link} from 'react-router-dom';
 
 
@@ -76,9 +77,12 @@ class NavBar extends Component{
                 <VideoCall className="navbar-icon"/>
                 <Apps className="navbar-icon"/>
                 
+                <Notifications className="navbar-icon"/>
+
                 <Link to="/about">
-                    <Notifications className="navbar-icon"/>
+                    <Info/>
                 </Link>
+            
                 </div>
 
   

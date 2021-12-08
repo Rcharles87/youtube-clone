@@ -1,6 +1,8 @@
 import {Component} from 'react';
-import YouTube from 'react-youtube';
 import './HomeCard.css'
+import formatViews from '../../helperFunctions/formatViews';
+import formatDate from '../../helperFunctions/formatDate'
+import { AccountCircle, CheckCircle, MoreHoriz, DonutSmall,} from '@material-ui/icons';
 
 
 class HomeVideoCard extends Component {
@@ -13,26 +15,29 @@ class HomeVideoCard extends Component {
 
     render () {
 
-
-        console.log(this.props.recomendedVideosOnLoad)
-          //what do i need from you tube :P
-        const {id, contentDetails, snippet, statistics } = this.props.recomendedVideosOnLoad
+        const { snippet, statistics } = this.props.recomendedVideosOnLoad
 
         return (
             <article className='video-card' alt={snippet.channelTitle} > 
-
-                <div className="try-this">
-                    <h4>{snippet.localized.title}</h4>
-                </div>
-                <div className='video-thumbnail'> 
-                   {/* <YouTube videoId={id} opts={{height:'256', width:'420'}}/> */}
-                   <img src={snippet.thumbnails.medium.url} />
-                </div>
                 
-                <div className="video-details"> 
-                    <p> {snippet.channelTitle} </p>
-                    <p className='viewCount'> {statistics.viewCount} views</p>
-                </div>   
+                <div className='video-thumbnail'> 
+                   <img src={snippet.thumbnails.medium.url} alt="video-thumbnail snippet"/>
+                </div>
+
+                <div className="video-title">
+                    <h5>{snippet.localized.title}</h5> 
+                </div>
+
+                <div className="channel-title"> 
+                    <AccountCircle className='verified-icon'/> {snippet.channelTitle} <CheckCircle className='verified'/>                     
+                </div>  
+
+                <div className='video-stats'>
+                    <div className='video-view-count'>{formatViews(statistics.viewCount)} views </div> 
+                    <DonutSmall className='verified-icon-dot'/>
+                    <span className='video-upload-date'>{formatDate(snippet.publishedAt)} </span>
+                    <MoreHoriz className='verified-options'/>
+                </div>
 
             </article>
         )
