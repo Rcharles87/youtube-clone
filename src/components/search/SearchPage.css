@@ -1,0 +1,17 @@
+.search-display-container {
+    display: flex;
+    flex: 0.8
+}
+
+/* .home-display-container > h2{
+   
+} */
+
+.all-videos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin:10px 10px 15px 15px;
+    grid-gap:5px;
+    scroll-behavior: smooth;
+}
+

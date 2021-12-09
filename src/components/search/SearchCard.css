@@ -1,0 +1,50 @@
+.search-card {
+    border-style: double;
+    text-align: center;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.193);
+    border-width: 3px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.search-thumbnail {
+    margin-top: 20px;
+}
+
+.search-thumbnail img, .channel-title, .search-title {
+    cursor: pointer;
+}
+
+.verified{
+    color: grey;
+    max-width: 15px;
+}
+
+.verified-icon {
+    color: grey;
+    max-width: 120px;
+}
+
+
+.channel-title{
+    margin-bottom: 15px;
+}
+
+.search-stats{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.verified-options {
+    color: grey;
+    max-width: 95px;
+}
+
+.verified-icon-dot{
+    color: grey; 
+    max-width: 10px;
+}
+

@@ -1,43 +1,63 @@
 import { Component } from "react";
 import "./NavBar.css"
+import MenuIcon from "@material-ui/icons/Menu";
+import { Search, VideoCall, Apps, Notifications, Info } from "@material-ui/icons";
+import {Link} from 'react-router-dom';
 
-class Nav extends Component {
-constructor(){
-    super();
-    this.state = {
-        search:""
+
+class NavBar extends Component{
+
+    handleSearch=(event)=>{
+        event.preventDefault()
+        this.props.handleYoutubeFetch()
+    }
+
+
+    render(){
+
+        return(
+
+            <div className="navbar">
+
+                <div className="navbar-left">
+                    <MenuIcon />
+                    <Link to="/">    
+                        <img
+                        className="navbar-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" 
+                        alt="" 
+                        />
+                    </Link>
+                </div>
+
+                <form className="navbar-input" onSubmit={this.handleSearch} >
+                    <input 
+                        placeholder="Search..." 
+                        type="text" 
+                        onInput={this.props.handleInput}
+                    />
+                    <button>
+                        <Search className="navbar-inputButton"/>
+                    </button>
+                </form>
+
+                <div className="navbar-icons">
+                    <VideoCall className="navbar-icon"/>
+                    <Apps className="navbar-icon"/>
+                    
+                    <Notifications className="navbar-icon"/>
+
+                    <Link to="/about">
+                        <Info/>
+                    </Link>
+            
+                </div>
+
+  
+            </div>
+        )
     }
 }
 
-handleformSubmit=(event)=>{
-    event.preventDefault();
-}
 
-render(){
-    return(
-        <div className="Navbar">
-        <article>
-        <h1>
-       Youtube Clone
-      </h1>
-      </article>
-      <div>
-      <form onSubmit={this.handleformSubmit}>
-       <input
-       type="text" name="name"
-       />
-       <input type="submit" value="Submit"
-       />
-      </form>
-      </div>
-      <aside>
-      <h3>
-          About Us 
-        </h3>
-        </aside>
-      </div>
-    )
-}
-}
-
-export default Nav
+export default NavBar

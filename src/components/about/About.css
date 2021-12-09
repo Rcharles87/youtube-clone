@@ -12,7 +12,10 @@
 }
 
 .team-bio{
-    background-color: rgb(226, 226, 226)
+    background-color: rgb(226, 226, 226);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, .2fr);
 }
 
 .team-bio h3{
