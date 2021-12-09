@@ -1,6 +1,10 @@
 .home-display-container {
-    display: grid;
-    margin: 10px;
+    display: flex;
+    flex: 0.8
+}
+
+.home-display-container > h2{
+   
 }
 
 .all-videos{

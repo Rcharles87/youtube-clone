@@ -1,15 +1,14 @@
-import { Component } from "react";
+import { useParams  } from "react-router-dom";
+import YouTube from "react-youtube";
 
-class Videos extends Component {
-  
 
-    render(){  
+function Videos () {
+    const { id } = useParams();
       return(
           <div>
-            <h1>single video goes here</h1>
+            <YouTube videoId={id}/>
           </div>
       ) 
-    }
     }
   
 
