@@ -1,7 +1,11 @@
-.home-display-container {
-    display: grid;
-    margin: 10px;
+.search-display-container {
+    display: flex;
+    flex: 0.8
 }
+
+/* .home-display-container > h2{
+   
+} */
 
 .all-videos{
     display: grid;

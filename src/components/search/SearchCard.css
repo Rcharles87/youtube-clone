@@ -1,4 +1,4 @@
-.video-card {
+.search-card {
     border-style: double;
     text-align: center;
     border-radius: 10px;
@@ -7,11 +7,11 @@
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
-.video-thumbnail {
+.search-thumbnail {
     margin-top: 20px;
 }
 
-.video-thumbnail img, .channel-title, .video-title {
+.search-thumbnail img, .channel-title, .search-title {
     cursor: pointer;
 }
 
@@ -30,7 +30,7 @@
     margin-bottom: 15px;
 }
 
-.video-stats{
+.search-stats{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;

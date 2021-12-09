@@ -27,12 +27,20 @@
 
 }
 
-.navbar-inputButton{
+button{
+    width: 50px !important;
+    background-color: #fafafa;
+    border: 1px solid lightgray;
+    color: gray;
+
+}
+
+/* .navbar-inputButton{
     width: 50px !important;
     background-color: #fafafa;
     border-left: 1px solid lightgray;
     color: gray;
-}
+} */
 
 .navbar-icons{
     display: flex;
