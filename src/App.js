@@ -2,8 +2,8 @@ import { Component } from 'react';
 import './App.css';
 import About from './components/about/About';
 import Nav from './components/nav/NavBar';
-import Videos from './components/video/Videos';
-import Home from './components/home/Home';
+import VideoPage from './components/video/VideoPage';
+import SearchPage from './components/search/SearchPage';
 import SideBar from './components/sidebar/SideBar';
 import {Switch, Route} from 'react-router-dom';
 
@@ -50,16 +50,14 @@ handleInput=(event)=>{
 
         <Switch>
           <Route exact path="/">
-            <Home youtubeData={this.state.fetchData} />
+            <SearchPage youtubeData={this.state.fetchData} />
           </Route>
 
           <Route path="/about">
             <About />
           </Route>
 
-          <Route path="/videos/:id">
-          <Videos />
-          </Route>
+          <Route path="/videos/:id" component={VideoPage} />
 
         </Switch>
       </div>

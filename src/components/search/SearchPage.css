@@ -1,11 +1,11 @@
-.home-display-container {
+.search-display-container {
     display: flex;
     flex: 0.8
 }
 
-.home-display-container > h2{
+/* .home-display-container > h2{
    
-}
+} */
 
 .all-videos{
     display: grid;

@@ -1,6 +1,5 @@
 import { Component } from "react";
 import "./About.css"
-// import { Link } from "react-router-dom";git 
 
 
 
@@ -9,20 +8,20 @@ class About extends Component{
     render(){
         return(
            <div className="about-container">
-               <h1>About</h1>
-              <div className="project-description">
-                  <h2>Project Description</h2>
-                  <p>A small team of three people building a working youtube clone from scratch. 
-                      A React application was created. This React applications allows users to search for YouTube videos using Google's YouTube API. 
-                      Once the user has entered their desired "search input", a series of videos are displayed for the user to select from. 
-                      Data was retrieved from API and rendered accordingly to display desired videos. 
-                      Additionally, users are able to select a video from a list to watch based on inputted fields within the search bar. 
-                      The project aims to recreate parts of the YouTube application, mimicking YouTube functionality. 
-                      Furthermore, YouTube Clone consists of a multiple features, such as but not limitng, to nav-Bar, home-page, and side-Bar. 
-                      Components have been rendered and displayed through data to present precise information at the area of interest. 
-                      When the user lands upon the home page, a series of "popular videos" are displayed. 
-                      These popular videos have mounted upon initial user arrival.</p>
-              </div>
+                <h1>About</h1>
+                <div className="project-description">
+                    <h2>Project Description</h2>
+                    <p>A small team of three people building a working youtube clone from scratch. 
+                        A React application was created. This React applications allows users to search for YouTube videos using Google's YouTube API. 
+                        Once the user has entered their desired "search input", a series of videos are displayed for the user to select from. 
+                        Data was retrieved from API and rendered accordingly to display desired videos. 
+                        Additionally, users are able to select a video from a list to watch based on inputted fields within the search bar. 
+                        The project aims to recreate parts of the YouTube application, mimicking YouTube functionality. 
+                        Furthermore, YouTube Clone consists of a multiple features, such as but not limitng, to nav-Bar, home-page, and side-Bar. 
+                        Components have been rendered and displayed through data to present precise information at the area of interest. 
+                        When the user lands upon the home page, a series of "popular videos" are displayed. 
+                        These popular videos have mounted upon initial user arrival.</p>
+                </div>
 
                 <div className="team-bio">
                     <h3>Team Bios</h3>

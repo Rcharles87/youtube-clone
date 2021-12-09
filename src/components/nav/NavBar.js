@@ -21,35 +21,35 @@ class NavBar extends Component{
 
                 <div className="navbar-left">
                     <MenuIcon />
-                <Link to="/">    
-                    <img
-                    className="navbar-logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" 
-                    alt="" 
-                    />
-                 </Link>
+                    <Link to="/">    
+                        <img
+                        className="navbar-logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" 
+                        alt="" 
+                        />
+                    </Link>
                 </div>
 
                 <form className="navbar-input" onSubmit={this.handleSearch} >
-                 <input 
-                 placeholder="Search..." 
-                 type="text" 
-                 onInput={this.props.handleInput}
-                 />
-                 <button>
-                <Search className="navbar-inputButton"/>
-                 </button>
+                    <input 
+                        placeholder="Search..." 
+                        type="text" 
+                        onInput={this.props.handleInput}
+                    />
+                    <button>
+                        <Search className="navbar-inputButton"/>
+                    </button>
                 </form>
 
                 <div className="navbar-icons">
-                <VideoCall className="navbar-icon"/>
-                <Apps className="navbar-icon"/>
-                
-                <Notifications className="navbar-icon"/>
+                    <VideoCall className="navbar-icon"/>
+                    <Apps className="navbar-icon"/>
+                    
+                    <Notifications className="navbar-icon"/>
 
-                <Link to="/about">
-                    <Info/>
-                </Link>
+                    <Link to="/about">
+                        <Info/>
+                    </Link>
             
                 </div>
 
