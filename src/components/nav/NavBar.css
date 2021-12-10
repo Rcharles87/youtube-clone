@@ -9,6 +9,10 @@
     background-color: white;
 }
 
+.navbar-left{
+    cursor: pointer;
+}
+
 .navbar-logo{
     height: 25px;
     object-fit: contain;

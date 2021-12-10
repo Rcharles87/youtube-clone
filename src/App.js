@@ -11,9 +11,12 @@ class App extends Component {
   constructor(){
     super()
     this.state={
+
     searchData: [],
-    userInput: "",   
-    };
+    userInput: "",
+    showSideBar: false,      
+    }
+
 
 }
 
@@ -38,6 +41,13 @@ handleInput=(event)=>{
   })
 }
 
+
+handleToggleSideBar=()=>{
+  this.setState({
+    showSideBar: !this.state.showSideBar
+  })
+}
+
 handleResetSearch = ()=> {
   this.setState({
     searchData:[],
@@ -48,13 +58,16 @@ handleResetSearch = ()=> {
 
 
 
+
   render(){
 
     return (
       <div>
 
-        <Nav userInput={this.state.userInput} handleInput={this.handleInput} userInput={this.state.userInput} handleYoutubeFetch={this.handleYoutubeFetch} handleResetSearch={this.handleResetSearch}/>
-        <SideBar/>
+
+        <Nav userInput={this.state.userInput} handleInput={this.handleInput} handleYoutubeFetch={this.handleYoutubeFetch} handleToggleSideBar={this.handleToggleSideBar} handleResetSearch={this.handleResetSearch}/>
+        <SideBar showSideBar={this.state.showSideBar}/>
+
 
         <Switch>
           <Route exact path="/">

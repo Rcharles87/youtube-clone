@@ -11,7 +11,8 @@ background-color: peachpuff;
 .sidebar-container{
     height: 100%;
     width: 200px;
-    float: left;
+    transition: .6s;
+    position: fixed;
     background-color: #fafafa;
 }
 

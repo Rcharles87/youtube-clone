@@ -14,6 +14,8 @@ class NavBar extends Component{
     // }
 
 
+    
+
     handleSearch=(event)=>{
         event.preventDefault();
         this.props.handleYoutubeFetch();
@@ -27,7 +29,9 @@ class NavBar extends Component{
             <div className="navbar">
 
                 <div className="navbar-left">
+                    <span onClick={this.props.handleToggleSideBar}>
                     <MenuIcon />
+                    </span>
                     <Link to="/">    
                         <img
                         className="navbar-logo"
