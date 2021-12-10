@@ -6,12 +6,19 @@ import {Link} from 'react-router-dom';
 
 
 class NavBar extends Component{
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         shouldDisplayVideo: true,
+    //     }
+    // }
+
 
     
 
     handleSearch=(event)=>{
-        event.preventDefault()
-        this.props.handleYoutubeFetch()
+        event.preventDefault();
+        this.props.handleYoutubeFetch();
     }
 
 
@@ -30,7 +37,7 @@ class NavBar extends Component{
                         className="navbar-logo"
                         src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" 
                         alt="" 
-                        />
+                        onClick={this.props.handleResetSearch}/>
                     </Link>
                 </div>
 
@@ -39,6 +46,7 @@ class NavBar extends Component{
                         placeholder="Search..." 
                         type="text" 
                         onInput={this.props.handleInput}
+                        value={this.props.userInput}
                     />
                     <button>
                         <Search className="navbar-inputButton"/>
