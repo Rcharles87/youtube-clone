@@ -39,6 +39,7 @@ class SearchPage extends Component {
             return <SearchCard videosOnSearch={videoObj} key={i} />
         })
 
+
         let initialdisplay = this.state.recomendedVideosOnLoad.map((videoObj, i)=>{
             return (
                 <article className='search-card' alt={videoObj.snippet.channelTitle} >  
@@ -64,11 +65,16 @@ class SearchPage extends Component {
             )
         })
 
+
+
+
         return (
 
             <div className='search-display-container'>
                 <div className='all-videos'>
+
                     {recommendedVideos.length === 0 ? initialdisplay : recommendedVideos }
+
                 </div>
             </div>
           
