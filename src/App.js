@@ -12,7 +12,8 @@ class App extends Component {
     super()
     this.state={
     fetchData: [],
-    userInput: ""      
+    userInput: "",
+    showSideBar: false,      
     }
 
 }
@@ -36,7 +37,11 @@ handleInput=(event)=>{
   })
 }
 
-
+handleToggleSideBar=()=>{
+  this.setState({
+    showSideBar: !this.state.showSideBar
+  })
+}
 
 
 
@@ -45,8 +50,8 @@ handleInput=(event)=>{
     return (
       <div>
 
-        <Nav userInput={this.state.userInput} handleInput={this.handleInput} handleYoutubeFetch={this.handleYoutubeFetch}/>
-        <SideBar/>
+        <Nav userInput={this.state.userInput} handleInput={this.handleInput} handleYoutubeFetch={this.handleYoutubeFetch} handleToggleSideBar={this.handleToggleSideBar}/>
+        <SideBar showSideBar={this.state.showSideBar}/>
 
         <Switch>
           <Route exact path="/">

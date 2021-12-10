@@ -10,7 +10,7 @@ class SideBar extends Component{
 
     render(){
         return(
-            <aside className="sidebar-container">  
+            <aside className="sidebar-container" style={{left: this.props.showSideBar ? "0px" : "-250px"}}>  
                 <ul className="sidebar-list">
                     <Link to="/">
                     <li className="row">
