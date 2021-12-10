@@ -27,23 +27,35 @@ handleSubmit=(event)=>{
 }
 
  render(){
-    
+     let comment = this.state.commArr.map((info)=>{
+         return(
+                <li className="single-comment">
+                    <div className="comment-info">`${info.userName}: ${info.comment}`</div>
+                </li>
+     )})
+     
     return (
-    <section>
-        <form onSubmit={this.handlerSubmit}>
-            <div className="name-conatiner">
+       
+    <section className="comment-container"> 
+        <div className="comment-form">
+            <form onSubmit={this.handleSubmit}>
+            
                 <label htmlFor="userName"> Name </label>
-                <input onInput={this.handlerInput} name="userName" id="userName" value={this.state.userName} />
-            </div>
-            <div className="comment-container">
+                <input onInput={this.handleInput} name="userName" id="userName" value={this.state.userName} />
+            
+            
                 <label htmlFor="comment"> Comment </label>
-                <input onInput={this.handlerInput} name="comment" id="comment" value={this.state.comment} />
-            </div>
-                <button>Submit</button>    
-        </form>
-        <ul>
-            {this.state.commArr.map(info=><li><><h3>{info.userName}</h3><div>{info.comment}</div></></li>)}
+                <input onInput={this.handleInput} name="comment" id="comment" value={this.state.comment} />
+            
+                <button  type="submit"> Submit Comment</button>    
+            </form>
+        </div>
+        <hr/>
+        <ul className="comments-list">
+           {comment}
         </ul>
+        <hr/>
+
     </section>
 
 
