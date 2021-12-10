@@ -47,9 +47,9 @@ class NavBar extends Component{
                     
                     <Notifications className="navbar-icon"/>
 
-                    <Link to="/about">
+                    {/* <Link to="/about">
                         <Info/>
-                    </Link>
+                    </Link> */}
             
                 </div>
 

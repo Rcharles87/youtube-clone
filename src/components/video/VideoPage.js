@@ -25,7 +25,7 @@ class VideoPage extends Component {
             <div className="video-container">
               <YouTube videoId={this.state.idNumber}/>
             </div>
-            <div className="comment-conatiner">
+            <div className="comments-conatiner">
               <Comments />
             </div>
 

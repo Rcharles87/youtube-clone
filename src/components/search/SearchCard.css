@@ -5,6 +5,7 @@
     border-color: rgba(0, 0, 0, 0.193);
     border-width: 3px;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
+    max-width: 250px;
 }
 
 .search-thumbnail {
@@ -13,6 +14,8 @@
 
 .search-thumbnail img, .channel-title, .search-title {
     cursor: pointer;
+    max-width: 250px;
+  
 }
 
 .verified{
@@ -28,6 +31,7 @@
 
 .channel-title{
     margin-bottom: 15px;
+   
 }
 
 .search-stats{

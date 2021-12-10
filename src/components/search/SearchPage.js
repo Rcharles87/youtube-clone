@@ -19,10 +19,13 @@ class SearchPage extends Component {
             return <SearchCard videosOnSearch={videoObj} key={i} />
         })
 
+
+
         return (
 
             <div className='search-display-container'>
                 <div className='all-videos'>
+                    {/* <h2>video goes here</h2> */}
                     {recommendedVideos ? recommendedVideos:"no videos to display"}
                 </div>
             </div>
