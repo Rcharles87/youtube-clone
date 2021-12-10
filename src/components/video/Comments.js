@@ -22,7 +22,9 @@ handleSubmit=(event)=>{
     event.preventDefault()
      const {userName , comment} = this.state
         this.setState({ 
-        commArr:[...this.state.commArr,{userName, comment}]
+        commArr:[...this.state.commArr,{userName, comment}],
+        comment:"",
+        userName:"",
    })
 }
 
