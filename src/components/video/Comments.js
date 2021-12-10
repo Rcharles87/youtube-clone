@@ -30,14 +30,14 @@ handleSubmit=(event)=>{
     
     return (
     <section>
-        <form onSubmit={this.handlerSubmit}>
+        <form onSubmit={this.handleSubmit}>
             <div className="name-conatiner">
                 <label htmlFor="userName"> Name </label>
-                <input onInput={this.handlerInput} name="userName" id="userName" value={this.state.userName} />
+                <input onInput={this.handleInput} name="userName" id="userName" value={this.state.userName} />
             </div>
             <div className="comment-container">
                 <label htmlFor="comment"> Comment </label>
-                <input onInput={this.handlerInput} name="comment" id="comment" value={this.state.comment} />
+                <input onInput={this.handleInput} name="comment" id="comment" value={this.state.comment} />
             </div>
                 <button>Submit</button>    
         </form>
