@@ -14,12 +14,18 @@ background-color: peachpuff;
     transition: .6s;
     position: fixed;
     background-color: #fafafa;
+
+}
+
+.sidebar-container > hr{
+    margin: 0;
 }
 
 .sidebar-list{
     height: auto;
     padding: 0;
     width: 100%;
+    /* margin-top: 0; */
 }
 
 

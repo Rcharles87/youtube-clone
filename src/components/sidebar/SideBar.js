@@ -10,6 +10,7 @@ class SideBar extends Component{
     render(){
         return(
             <aside className="sidebar-container" style={{left: this.props.showSideBar ? "0px" : "-250px"}}>  
+                <hr/>
                 <ul className="sidebar-list">
                     <Link to="/">
                     <li className="row">
@@ -21,7 +22,7 @@ class SideBar extends Component{
                         </div>
                     </li>
                     </Link>
-                    {/* <hr /> */}
+                    <hr />
                         <Link to="/about">
                     <li className="row">
                         <div className="icon">
@@ -32,6 +33,7 @@ class SideBar extends Component{
                         </div>
                     </li>
                         </Link>
+                        <hr/>
                    
                 </ul> 
 
