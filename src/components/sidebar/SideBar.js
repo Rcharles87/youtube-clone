@@ -1,5 +1,4 @@
 import { Component } from "react";
-import SideBarRow from "./SideBarRow";
 import "./SideBar.css";
 import { Home, Info,  } from "@material-ui/icons";
 import { Link } from "react-router-dom";

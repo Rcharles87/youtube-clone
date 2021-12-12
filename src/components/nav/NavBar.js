@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./NavBar.css"
 import MenuIcon from "@material-ui/icons/Menu";
-import { Search, VideoCall, Apps, Notifications, Info } from "@material-ui/icons";
+import { Search, VideoCall, Apps, Notifications, } from "@material-ui/icons";
 import {Link} from 'react-router-dom';
 
 
