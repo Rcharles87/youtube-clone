@@ -1,10 +1,15 @@
 .search-card {
-    border-style: double;
     text-align: center;
     border-radius: 10px;
-    border-color: rgba(0, 0, 0, 0.193);
-    border-width: 3px;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    background-color: rgb(219, 219, 219);
+    max-width: 250px;
+    transition: all .2s ease-in-out;
+}
+
+.search-card:hover{
+    transform: scale(1.1);
+    border: 1px solid lightgray;
+
 }
 
 .search-thumbnail {
@@ -13,6 +18,8 @@
 
 .search-thumbnail img, .channel-title, .search-title {
     cursor: pointer;
+    max-width: 250px;
+  
 }
 
 .verified{
@@ -28,6 +35,7 @@
 
 .channel-title{
     margin-bottom: 15px;
+   
 }
 
 .search-stats{

@@ -1,0 +1,9 @@
+.video-container{
+    display: grid;
+    place-items: center;
+ 
+}
+.comments-container{
+    display: grid;
+    place-items: center center;
+}

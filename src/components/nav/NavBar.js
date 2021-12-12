@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./NavBar.css"
 import MenuIcon from "@material-ui/icons/Menu";
-import { Search, VideoCall, Apps, Notifications, Info } from "@material-ui/icons";
+import { Search, VideoCall, Apps, Notifications, } from "@material-ui/icons";
 import {Link} from 'react-router-dom';
 
 
@@ -13,6 +13,8 @@ class NavBar extends Component{
     //     }
     // }
 
+
+    
 
     handleSearch=(event)=>{
         event.preventDefault();
@@ -27,7 +29,9 @@ class NavBar extends Component{
             <div className="navbar">
 
                 <div className="navbar-left">
+                    <span onClick={this.props.handleToggleSideBar}>
                     <MenuIcon />
+                    </span>
                     <Link to="/">    
                         <img
                         className="navbar-logo"
@@ -55,9 +59,9 @@ class NavBar extends Component{
                     
                     <Notifications className="navbar-icon"/>
 
-                    <Link to="/about">
+                    {/* <Link to="/about">
                         <Info/>
-                    </Link>
+                    </Link> */}
             
                 </div>
 
