@@ -23,7 +23,7 @@ class VideoPage extends Component {
       return(
           <div>
             <div className="video-container">
-              <YouTube videoId={this.state.idNumber}/>
+              <YouTube videoId={this.state.idNumber} opts={{ height: '802', width: '1480' }}/>
             </div>
             <div className="comments-conatiner">
               <Comments />
