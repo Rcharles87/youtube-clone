@@ -21,6 +21,7 @@ handleSubmit=(event)=>{
     event.preventDefault()
      const {  comment} = this.state
         this.setState({ 
+
         commArr:[...this.state.commArr,{ comment}]
    })
 }
@@ -34,6 +35,7 @@ handleSubmit=(event)=>{
      )})
      
     return (
+
        
     <section className="comment-container"> 
            
@@ -47,6 +49,7 @@ handleSubmit=(event)=>{
             
             <button id="button" type="Submit" > Add Comment</button>   
     
+
         </form>
     
        

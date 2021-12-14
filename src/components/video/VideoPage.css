@@ -1,4 +1,10 @@
-.video-container {
-  text-align: center;
+.video-container{
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+.comments-container{
+    display: grid;
+    place-items: center center;
+}
 
-} 
