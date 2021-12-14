@@ -6,7 +6,6 @@ class Comments extends Component{
  constructor(){
      super()
      this.state={
-         userName:"",
          comment:"",
          commArr:[]
      }
@@ -20,36 +19,45 @@ handleInput=(event)=>{
 
 handleSubmit=(event)=>{
     event.preventDefault()
-     const {userName , comment} = this.state
+     const {  comment} = this.state
         this.setState({ 
-        commArr:[...this.state.commArr,{userName, comment}],
-        comment:"",
-        userName:"",
+
+        commArr:[...this.state.commArr,{ comment}]
    })
 }
 
  render(){
-    
+     let comment = this.state.commArr.map((info)=>{
+         return(
+                <li className="single-comment">
+                    <div className="comment-info"> {info.comment} </div>
+                </li>
+     )})
+     
     return (
-    <section>
-        <form onSubmit={this.handleSubmit}>
 
-            <div className="comments-header">
-                <h4>Comments</h4>
-            </div>
-            <div className="name-conatiner">
-                <label htmlFor="userName"> Name </label>
-                <input onInput={this.handleInput} name="userName" id="userName" value={this.state.userName} />
-            </div>
-            <div className="comment-container">
-                <label htmlFor="comment"> Comment </label>
-                <input onInput={this.handleInput} name="comment" id="comment" value={this.state.comment} />
-            </div>
-                <button>Submit</button>    
+       
+    <section className="comment-container"> 
+           
+        <form onSubmit={this.handleSubmit}>
+            <input  onInput={this.handleInput}
+            name="comment" 
+            id="comment"
+            placeholder="Add a comment..."
+            value={this.state.comment} 
+                />
+            
+            <button id="button" type="Submit" > Add Comment</button>   
+    
+
         </form>
-        <ul>
-            {this.state.commArr.map(info=><li><><h3>{info.userName}</h3><div>{info.comment}</div></></li>)}
+    
+       
+        <ul className="comments-list">
+           {comment}
         </ul>
+       
+
     </section>
 
 
