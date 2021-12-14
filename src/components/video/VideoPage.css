@@ -1,6 +1,7 @@
 .video-container{
     display: grid;
     place-items: center;
+    width: 100vw;
  
 }
 .comments-container{

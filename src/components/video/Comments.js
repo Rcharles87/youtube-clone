@@ -33,6 +33,10 @@ handleSubmit=(event)=>{
     return (
     <section>
         <form onSubmit={this.handleSubmit}>
+
+            <div className="comments-header">
+                <h4>Comments</h4>
+            </div>
             <div className="name-conatiner">
                 <label htmlFor="userName"> Name </label>
                 <input onInput={this.handleInput} name="userName" id="userName" value={this.state.userName} />
