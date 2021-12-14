@@ -21,7 +21,7 @@ class VideoPage extends Component {
     render(){ 
 
       return(
-          <div>
+          <div >
             <div className="video-container">
               <YouTube videoId={this.state.idNumber} opts={{ height: '802', width: '1480' }}/>
             </div>
