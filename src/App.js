@@ -23,8 +23,6 @@ class App extends Component {
 
 
 handleYoutubeFetch = (url) => {
-  //fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=28&regionCode=US&key=${process.env.REACT_APP_API_KEY}`)
-  //do not pass key, raise youtube state
   fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
   .then((res)=>{
       return res.json()

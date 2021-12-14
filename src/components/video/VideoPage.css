@@ -6,5 +6,6 @@
 .comments-container{
     display: grid;
     place-items: center center;
+  padding-top: 100px;
 }
 
