@@ -6,7 +6,6 @@ class Comments extends Component{
  constructor(){
      super()
      this.state={
-         userName:"",
          comment:"",
          commArr:[]
      }
@@ -20,9 +19,9 @@ handleInput=(event)=>{
 
 handleSubmit=(event)=>{
     event.preventDefault()
-     const {userName , comment} = this.state
+     const {  comment} = this.state
         this.setState({ 
-        commArr:[...this.state.commArr,{userName, comment}]
+        commArr:[...this.state.commArr,{ comment}]
    })
 }
 
@@ -30,31 +29,31 @@ handleSubmit=(event)=>{
      let comment = this.state.commArr.map((info)=>{
          return(
                 <li className="single-comment">
-                    <div className="comment-info">`${info.userName}: ${info.comment}`</div>
+                    <div className="comment-info"> {info.comment} </div>
                 </li>
      )})
      
     return (
        
     <section className="comment-container"> 
-        <div className="comment-form">
-            <form onSubmit={this.handleSubmit}>
+           
+        <form onSubmit={this.handleSubmit}>
+            <input  onInput={this.handleInput}
+            name="comment" 
+            id="comment"
+            placeholder="Add a comment..."
+            value={this.state.comment} 
+                />
             
-                <label htmlFor="userName"> Name </label>
-                <input onInput={this.handleInput} name="userName" id="userName" value={this.state.userName} />
-            
-            
-                <label htmlFor="comment"> Comment </label>
-                <input onInput={this.handleInput} name="comment" id="comment" value={this.state.comment} />
-            
-                <button  type="submit"> Submit Comment</button>    
-            </form>
-        </div>
-        <hr/>
+            <button id="button" type="Submit" > Add Comment</button>   
+    
+        </form>
+    
+       
         <ul className="comments-list">
            {comment}
         </ul>
-        <hr/>
+       
 
     </section>
 
