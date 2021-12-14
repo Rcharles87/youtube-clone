@@ -11,7 +11,7 @@ class SearchPage extends Component {
         super();
         this.state = {
             videosOnSearch : [],
-            recomendedVideosOnLoad: [],
+            popularVideos: [],
         }
     }
 
@@ -28,19 +28,18 @@ class SearchPage extends Component {
             }).then((data)=> {
                 console.log(data.items)
                 this.setState({
-                    recomendedVideosOnLoad: data.items
+                    popularVideos: data.items
                 })
-            })
+            }).catch((err)=> console.log(err))
     } 
 
     render () {
-        console.log(this.state.recomendedVideosOnLoad)
-        let recommendedVideos = this.props.searchData.map((videoObj, i)=>{
+        console.log(this.state.popularVideos)
+        let searchVideos = this.props.searchData.map((videoObj, i)=>{
             return <SearchCard videosOnSearch={videoObj} key={i} />
         })
 
-
-        let initialdisplay = this.state.recomendedVideosOnLoad.map((videoObj, i)=>{
+        let initialdisplay = this.state.popularVideos.map((videoObj, i)=>{
             return (
                 <article className='search-card' alt={videoObj.snippet.channelTitle} >  
                     <Link to={`/videos/${videoObj.id}`}>            
@@ -61,7 +60,7 @@ class SearchPage extends Component {
                         <span className='search-upload-date'>{formatDate(videoObj.snippet.publishedAt)} </span>
                         <MoreHoriz className='verified-options'/>
                     </div>
-            </article>
+                </article>
             )
         })
 
@@ -72,9 +71,7 @@ class SearchPage extends Component {
 
             <div className='search-display-container'>
                 <div className='all-videos'>
-
-                    {recommendedVideos.length === 0 ? initialdisplay : recommendedVideos }
-
+                    {searchVideos.length === 0 ? initialdisplay : searchVideos }
                 </div>
             </div>
           
